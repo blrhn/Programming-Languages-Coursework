@@ -1,0 +1,5 @@
+# id gry; liczba egzemplarzy; min graczy; max graczy
+1; 2; 2; 4
+2; 3; 2; 2
+3; 2; 2; 6
+4; 1; 3; 5

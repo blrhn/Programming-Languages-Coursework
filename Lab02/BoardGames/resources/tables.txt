@@ -1,0 +1,7 @@
+# id stolika, liczba miejsc
+1; 4
+2; 6
+3; 2
+4; 6
+5; 4
+6; 8
