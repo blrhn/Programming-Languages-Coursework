@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="riverSectionSetupView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.0" prefWidth="510.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="riversection.gui.controller.RiverSectionSetupController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="101500.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="101500.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="101500.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="29.600012207031256" minHeight="10.0" prefHeight="28.800024414062506" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.79999389648438" minHeight="10.0" prefHeight="39.999975585937506" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="riverSectionNameTextField" promptText="Nazwa odcinka rzecznego">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="delayFieldText" promptText="Opóźnienie" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="createButton" mnemonicParsing="false" onAction="#setRiverSection" text="Utwórz" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+            <TextField fx:id="tailorHost" promptText="Host krawca" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="tailorPort" promptText="Port krawca" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <GridPane GridPane.columnIndex="1">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="74.00000610351563" minHeight="10.0" prefHeight="71.8" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="118.79999389648438" minHeight="10.0" prefHeight="58.999981689453136" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="118.79999389648438" minHeight="10.0" prefHeight="39.000018310546864" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="environmentNameTexField" promptText="Nazwa środowiska" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="connectEnvironmentButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#connectToEnvironment" text="Połącz ze środowiskiem" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="unregisterButton" mnemonicParsing="false" onAction="#unregister" text="Wyrejestruj" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </GridPane>
+      <GridPane GridPane.columnIndex="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="86.99999389648437" minHeight="10.0" prefHeight="71.20001220703125" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="117.6" minHeight="10.0" prefHeight="99.19998779296876" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="retentionBasinName" promptText="Nazwa zbiornika" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="connectRetentionBasinButton" mnemonicParsing="false" onAction="#connectToRetentionBasin" prefWidth="159.0" text="Połącz ze zbiornikiem (out)" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>
