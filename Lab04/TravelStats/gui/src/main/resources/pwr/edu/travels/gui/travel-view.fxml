@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1250.0" vgap="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pwr.edu.travels.gui.controller.ViewController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="295.6000122070312" minHeight="10.0" prefHeight="91.00000610351563" vgrow="NEVER" />
+    <RowConstraints maxHeight="546.8000053405761" minHeight="10.0" prefHeight="431.0000366210937" valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="546.8000053405761" minHeight="10.0" prefHeight="56.599963378906295" valignment="CENTER" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <GridPane alignment="CENTER" hgap="50.0" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="67.60001220703126" minHeight="10.0" prefHeight="43.39999084472656" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="101.9999870300293" minHeight="10.0" prefHeight="48.200009155273435" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane alignment="CENTER" hgap="5.0" prefHeight="74.0" prefWidth="900.0" vgap="10.0" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="635.1999877929687" minWidth="10.0" prefWidth="598.4000122070313" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="591.9999877929689" minWidth="10.0" prefWidth="591.9999877929689" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+              </rowConstraints>
+               <children>
+                  <Group GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <children>
+                        <ComboBox fx:id="sectionComboBox" disable="true" layoutX="129.60000610351562" prefHeight="26.0" prefWidth="211.0" />
+                        <Label alignment="CENTER" layoutY="4.0" text="Zmienna przekroju:">
+                           <padding>
+                              <Insets left="15.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="200.0" />
+                     </GridPane.margin>
+                  </Group>
+                  <GridPane alignment="CENTER" hgap="10.0" prefHeight="30.0" prefWidth="458.0" vgap="10.0" GridPane.columnIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="332.8000122070313" minWidth="10.0" prefWidth="283.1999755859375" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.2000244140625" minWidth="10.0" prefWidth="295.2000244140625" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="NEVER" />
+                    </rowConstraints>
+                     <children>
+                        <Group>
+                           <children>
+                              <ComboBox fx:id="yearComboBox" disable="true" layoutX="40.00000190734863" prefHeight="26.0" prefWidth="175.0" visibleRowCount="3" />
+                              <Label layoutY="4.0" prefHeight="18.0" prefWidth="27.0" text="Rok:" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </Group>
+                        <Button fx:id="loadDataButton" disable="true" mnemonicParsing="false" onAction="#onLoadButton" prefHeight="26.0" prefWidth="73.0" text="Wczytaj" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Group GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <children>
+                  <ComboBox fx:id="variableComboBox" layoutX="178.39999389648438" prefHeight="26.0" prefWidth="503.0" />
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutY="4.800000190734863" prefHeight="17.0" prefWidth="180.0" text="Wybierz dane statystyczne:" />
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Group>
+         </children>
+      </GridPane>
+      <TableView fx:id="dataTable" prefHeight="466.0" prefWidth="860.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+      <GridPane hgap="5.0" vgap="5.0" GridPane.rowIndex="2">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pagination fx:id="tablePagination" disable="true" maxPageIndicatorCount="1" prefHeight="40.0" prefWidth="860.0" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin>
+            </Pagination>
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets left="20.0" right="20.0" top="10.0" />
+   </padding>
+</GridPane>
