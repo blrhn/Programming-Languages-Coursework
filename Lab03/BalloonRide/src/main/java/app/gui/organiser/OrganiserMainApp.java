@@ -1,0 +1,34 @@
+package app.gui.organiser;
+
+import app.gui.shared.WelcomeViewController;
+import app.gui.shared.utils.enums.User;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class OrganiserMainApp extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/shared/welcome-view.fxml"));
+        Parent root = loader.load();
+
+        WelcomeViewController controller = loader.getController();
+        controller.setUserTypeSettings(User.ORGANISER);
+
+        Scene scene = new Scene(root);
+        stage.setTitle(User.ORGANISER.toString());
+        stage.setScene(scene);
+        stage.sizeToScene();
+        stage.show();
+        stage.setMinWidth(stage.getWidth());
+        stage.setMinHeight(stage.getHeight());
+    }
+
+    public static void main(String[] args) {
+        launch();
+    }
+}
