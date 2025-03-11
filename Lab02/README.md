@@ -1,4 +1,4 @@
-# Instruction (in Polish)
+## Instruction (in Polish)
 Załóżmy, że na jakiejś sali odbywa się festiwal gier planszowych. Organizatorzy tego festiwalu przygotowali specjalnie na tę okazję zestawy gier, jak również stoliki, na których można je rozłożyć. Kłopot w tym, że na początku nie wiadomo, w jakie gry będą chcieli zagrać odwiedzający festiwal gracze. Dlatego pojawił się problem, jak rozłożyć gry na stolikach oraz w jakim porządku usadzić przy tych stolikach graczy. Problem nie jest trywialny, gdyż:
 gracze mogą mieć różne preferencje co do gier, w które chcieliby zagrać;
 gry mogą mieć różne ograniczenia co do liczby grających w nie graczy;
